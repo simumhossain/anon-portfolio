@@ -7,7 +7,7 @@ Live at **[anon.anonsagent.com](https://anon.anonsagent.com)**.
 ## Stack
 - Next.js 14 (App Router), React 18, TypeScript
 - Tailwind CSS 3 + lucide-react icons
-- Deployed on Vercel
+- Deployed on GitHub Pages (static export) → **https://anon.anonsagent.com**
 
 ## Run locally
 ```bash
