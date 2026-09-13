@@ -1,5 +1,5 @@
 import { ArrowUpRight, Sparkles, Target, PenLine, Eye, Mail, Globe, Wand2, TrendingUp, Briefcase, GraduationCap, Phone, MessageCircle, Award, Rocket, Cpu, LineChart, Handshake, ShoppingBag, Store, Gauge, Compass } from "lucide-react";
-import { Reveal, Counter } from "@/components/motion";
+import { Reveal, Counter, Marquee } from "@/components/motion";
 
 const NAV = [
   { href: "#what-i-do", label: "What I do" },
@@ -151,7 +151,9 @@ const PHONE = "01827-888314";
 
 export default function Portfolio() {
   return (
-    <div className="min-h-dvh bg-bg font-body text-fg">
+    <div className="scene-glow min-h-dvh bg-bg font-body text-fg">
+      {/* Film grain overlay — global texture */}
+      <div className="grain" aria-hidden="true" />
       {/* Header */}
       <header className="sticky top-0 z-50 border-b border-line bg-bg/80 backdrop-blur-md">
         <div className="container-x flex h-16 items-center justify-between">
@@ -193,7 +195,7 @@ export default function Portfolio() {
                   I understand business and{" "}
                   <span className="relative inline-block whitespace-nowrap">
                     scale it with AI
-                    <span className="absolute inset-x-0 bottom-2 -z-10 h-4 bg-accent/25 md:h-5" aria-hidden="true" />
+                    <span className="hl-shimmer" aria-hidden="true" />
                   </span>
                   .
                 </h1>
@@ -241,6 +243,23 @@ export default function Portfolio() {
           </div>
         </section>
 
+        {/* Kinetic marquee strip */}
+        <div className="border-y border-line bg-card py-4">
+          <Marquee
+            items={[
+              "Meta Ads",
+              "A/B Testing",
+              "AI Automation",
+              "Unit Economics",
+              "Copywriting",
+              "Funnels",
+              "Command Centers",
+              "Bangla + English",
+            ]}
+            className="font-heading text-sm font-semibold uppercase tracking-widest text-accent"
+          />
+        </div>
+
         {/* WHAT I DO — bento grid */}
         <section id="what-i-do" className="section-pad border-b border-line bg-card-warm">
           <div className="container-x">
@@ -268,7 +287,7 @@ export default function Portfolio() {
                 return (
                   <Reveal key={s.title} delay={s.i * 0.05}>
                     <div
-                      className={`group flex h-full flex-col rounded-2xl border bg-card p-7 shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lift ${span} ${featured ? "border-accent/40 hover:border-accent/70" : "border-line hover:border-accent/40"}`}
+                      className={`group sheen flex h-full flex-col rounded-2xl border bg-card p-7 shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lift ${span} ${featured ? "border-accent-2/50 hover:border-accent-2/80 bg-gradient-to-br from-card to-card-warm" : "border-line hover:border-accent/40 bg-card"}`}
                     >
                       <div
                         className={`mb-4 flex h-11 w-11 items-center justify-center rounded-xl transition-all duration-300 group-hover:scale-110 ${featured ? "bg-accent text-white" : "bg-accent-soft text-accent group-hover:bg-accent group-hover:text-white"}`}
@@ -401,7 +420,7 @@ export default function Portfolio() {
             <div className="mt-12 grid gap-5 md:grid-cols-3">
               {EDUCATION.map((ed, i) => (
                 <Reveal key={ed.degree} delay={i * 0.1}>
-                  <div className="h-full rounded-2xl border border-line bg-card p-7 shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-lift">
+                  <div className="sheen h-full rounded-2xl border border-line bg-card p-7 shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-lift">
                     <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-accent-soft text-accent">
                       <GraduationCap className="h-5 w-5" />
                     </div>

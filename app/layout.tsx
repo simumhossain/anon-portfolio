@@ -1,6 +1,6 @@
 import { Space_Grotesk, Archivo } from "next/font/google";
 import "./globals.css";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 
 const archivo = Archivo({
   subsets: ["latin"],
@@ -22,7 +22,10 @@ export const metadata: Metadata = {
     description: "I understand business and scale it with AI.",
     type: "website",
   },
-  themeColor: "#0e0e10",
+};
+
+export const viewport: Viewport = {
+  themeColor: "#0e0e12",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

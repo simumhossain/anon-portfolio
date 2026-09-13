@@ -82,3 +82,19 @@ export function Counter({
     </span>
   );
 }
+
+/** Infinite horizontal ticker — a kinetic "operator strip" of repeated labels. */
+export function Marquee({ items, className }: { items: string[]; className?: string }) {
+  const reduce = useReducedMotion();
+  const row = items.join("  ·  ") + "  ·  ";
+  const n = reduce ? 1 : 3;
+  return (
+    <div className={"marquee overflow-hidden " + (className ?? "")} aria-hidden="true">
+      {Array.from({ length: n }, (_, i) => (
+        <div key={i} className="marquee-track" style={{ animationDuration: `${Math.max(18, row.length * 0.09)}s` }}>
+          <span>{row}</span>
+        </div>
+      ))}
+    </div>
+  );
+}
