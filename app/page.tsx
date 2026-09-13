@@ -1,4 +1,4 @@
-import { ArrowUpRight, Sparkles, Target, PenLine, Eye, Github, Mail, Globe, Wand2, TrendingUp, Briefcase, GraduationCap, Phone, MessageCircle, Award } from "lucide-react";
+import { ArrowUpRight, Sparkles, Target, PenLine, Eye, Mail, Globe, Wand2, TrendingUp, Briefcase, GraduationCap, Phone, MessageCircle, Award } from "lucide-react";
 import { Reveal, Counter } from "@/components/motion";
 
 const NAV = [
@@ -377,23 +377,12 @@ export default function Portfolio() {
                 >
                   <Phone className="h-4 w-4" /> {PHONE}
                 </a>
-                <a
-                  href="https://github.com/simumhossain/anon-portfolio"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full border border-white/25 px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:border-white/60 hover:bg-white/5"
-                >
-                  <Github className="h-4 w-4" /> Source on GitHub
-                </a>
               </div>
             </Reveal>
             <Reveal delay={0.2}>
               <div className="flex flex-wrap gap-4 text-sm text-white/60">
                 <a href="https://linkedin.com/in/hossainanon" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 transition-colors hover:text-white">
                   <MessageCircle className="h-4 w-4" /> linkedin.com/in/hossainanon
-                </a>
-                <a href="https://simumanon.github.io/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 transition-colors hover:text-white">
-                  <Globe className="h-4 w-4" /> General portfolio
                 </a>
               </div>
             </Reveal>
