@@ -1,9 +1,10 @@
-import { ArrowUpRight, Sparkles, Target, PenLine, Eye, Mail, Globe, Wand2, TrendingUp, Briefcase, GraduationCap, Phone, MessageCircle, Award } from "lucide-react";
+import { ArrowUpRight, Sparkles, Target, PenLine, Eye, Mail, Globe, Wand2, TrendingUp, Briefcase, GraduationCap, Phone, MessageCircle, Award, Rocket, Cpu, LineChart, Handshake, ShoppingBag, Store, Lightbulb, Users, Gauge, Compass } from "lucide-react";
 import { Reveal, Counter } from "@/components/motion";
 
 const NAV = [
-  { href: "#skills", label: "Skills" },
+  { href: "#what-i-do", label: "What I do" },
   { href: "#experience", label: "Experience" },
+  { href: "#ventures", label: "Ventures" },
   { href: "#about", label: "About" },
   { href: "#education", label: "Education" },
   { href: "#contact", label: "Contact" },
@@ -12,34 +13,46 @@ const NAV = [
 const METRICS = [
   { value: 8, suffix: "×", label: "Revenue growth in 6 months", sub: "real BDT, real business" },
   { value: 0.01, prefix: "$", decimals: 2, label: "Cost per click", sub: "via Meta Ads A/B testing" },
-  { value: 1, suffix: "mo", label: "Hire → promotion", sub: "Marketer to Manager" },
+  { value: 1, suffix: "Cr", label: "BDT monthly run-rate", sub: "12L → 1Cr scaling an operation" },
   { value: 100, suffix: "+", label: "Customer calls / day", sub: "orders, trust, recovery" },
 ];
 
-const SKILLS = [
+const SERVICES = [
   {
-    icon: Wand2,
-    title: "AI Content Creation",
-    desc: "Imagination to visual, end to end — concepting, generating, and tuning AI imagery with Midjourney, DALL·E, Gemini and VEO until the tone lands.",
-    tools: "Midjourney · DALL·E · Gemini · VEO",
+    icon: LineChart,
+    title: "Understand & scale business",
+    desc: "I read the economics of a business — unit economics, margin, funnel, position — then build the machine that grows it. Proven: took a business from 12L to 1Cr BDT in six months.",
+    tools: "Strategy · Unit economics · Operations · Pricing",
+  },
+  {
+    icon: Cpu,
+    title: "Automate with AI",
+    desc: "Any business or service, I can see where it can be automated — content, ads, ops, customer service, reporting. I design the workflow and make the AI do the heavy lifting.",
+    tools: "Agent workflows · Prompt engineering · Automation",
   },
   {
     icon: Target,
-    title: "Run & Optimize",
-    desc: "A/B testing hooks, headlines and visual motifs against real metrics. I ship the winners and cut the rest — creative built to convert, $0.01 CPC.",
-    tools: "Meta Ads Manager · Analytics",
+    title: "Growth marketing that converts",
+    desc: "A/B-tested hooks, headlines and visuals against real metrics. I ship what works and cut the rest — creative built to convert at $0.01 CPC.",
+    tools: "Meta Ads · Analytics · CRO · Funnels",
   },
   {
     icon: PenLine,
-    title: "Copy that lands",
+    title: "Copy & AI content",
     desc: "English + Bangla creative that reads human. Campaign headlines engineered to stop the scroll and earn the click.",
     tools: "Copywriting · Canva · Storytelling",
   },
   {
-    icon: Eye,
-    title: "Trends & New Tools",
-    desc: "Daily user of ChatGPT, Claude, Gemini, DeepSeek; self-taught prompt engineering since 2023. I adopt tools before they trend — and build the workflow.",
-    tools: "Agent workflows · AI research · Prompt engineering",
+    icon: Rocket,
+    title: "Launch & build ventures",
+    desc: "Founder track: taken ideas from zero to operating businesses — e-commerce, import supply chains, a campus food venture, and a live publication.",
+    tools: "Sourcing · Logistics · Product · Positioning",
+  },
+  {
+    icon: Handshake,
+    title: "Consult on business + AI",
+    desc: "You understand your domain; I understand how business and AI fit together. I advise on where to invest, what to build, and what to automate — knowledge I share freely.",
+    tools: "Consulting · Advisory · Training · Roadmaps",
   },
 ];
 
@@ -56,16 +69,6 @@ const EXPERIENCE = [
     built: "Visual concepts · Ad copy · A/B lab · Campaign strategy",
   },
   {
-    company: "Anon's Agent",
-    role: "Founder · Content Creator",
-    range: "Personal publication",
-    points: [
-      "Founded and ran a live AI-content publication with weekly curated, human-reviewed coverage.",
-      "Shipped a full design system — publication site, article templates, and editorial process.",
-    ],
-    built: "Publication design · Writing · Editorial system",
-  },
-  {
     company: "M/s Nakshee Decor",
     role: "Manager (promoted from Marketer in 1 month)",
     range: "Jun 2025 – Jan 2026 · Dhaka · Interior & Decor",
@@ -77,10 +80,25 @@ const EXPERIENCE = [
       "Owned profit modeling, pricing, cost control, KPI reporting, and stakeholder communication.",
     ],
   },
+];
+
+const VENTURES = [
+  {
+    company: "FoodBump",
+    role: "Founder",
+    range: "Oct 2023 – Sep 2024 · Campus Food Venture",
+    icon: ShoppingBag,
+    points: [
+      "Built and operated a campus food business from scratch while studying full-time.",
+      "Ran customer interaction, order management, and real-time dynamic pricing.",
+      "Operated solo — owner, marketer, and operator in one.",
+    ],
+  },
   {
     company: "Budget Bazaar",
     role: "Co-Founder",
     range: "Sep 2025 – Feb 2026 · E-Commerce · Import",
+    icon: Store,
     points: [
       "Owned end-to-end sourcing from China to Bangladesh — full supply-chain.",
       "Handled logistics, delivery, and order management across B2C and B2B.",
@@ -88,21 +106,21 @@ const EXPERIENCE = [
     ],
   },
   {
-    company: "FoodBump",
-    role: "Founder",
-    range: "Oct 2023 – Sep 2024 · Campus Food Venture",
+    company: "Anon's Agent",
+    role: "Founder · Content Creator",
+    range: "Personal publication · ongoing",
+    icon: Globe,
     points: [
-      "Built and operated a campus food business from scratch while studying full-time.",
-      "Ran customer interaction, order management, and real-time dynamic pricing.",
-      "Operated solo — owner, marketer, and operator in one.",
+      "Founded and ran a live AI-content publication with weekly curated, human-reviewed coverage.",
+      "Shipped a full design system — publication site, article templates, and editorial process.",
     ],
   },
 ];
 
 const ABOUT_PARAGRAPHS = [
-  "I'm Hossain Simum Anon — a technical graduate who turned a love of content and AI into real-world business results. I treat AI tools the way a photographer treats a camera: instruments I've learned to direct, not novelties to prompt.",
-  "I plan the concept, generate the asset, and optimize it until it earns its place in front of an audience. Bilingual (English + Bangla), always measured, and always iterating — from imagination to a shipping, converting asset.",
-  "My foundations: B.Sc. in Information & Communication Engineering (DIU, 2026, CGPA 3.27), a published patent, and hands-on ownership across ventures and a six-figure-then-seven-figure operation.",
+  "I'm Hossain Simum Anon — a visionary who understands business end to end, and an AI-first builder who automates any business or service. I'm equally comfortable talking strategy with a founder and building the workflow that executes it.",
+  "I've scaled a business from 12L to 1 Crore BDT in six months, founded and run three ventures, earned a published patent, and use AI daily to remove friction from everything I touch. My edge is the crossover: I see both how a business makes money and where AI can multiply that.",
+  "I consult on business and AI because I enjoy sharing the knowledge. My foundations: B.Sc. in Information & Communication Engineering (DIU, 2026, CGPA 3.27), hands-on ownership across ventures, and a record of real numbers — not claims.",
 ];
 
 const EDUCATION = [
@@ -133,10 +151,10 @@ export default function Portfolio() {
             ))}
           </nav>
           <a
-            href={`mailto:${EMAIL}?subject=AI%20Content%20Specialist%20Application`}
+            href={`mailto:${EMAIL}?subject=Let%27s%20build%20something`}
             className="hidden items-center gap-1.5 rounded-full bg-fg px-4 py-2 text-sm font-semibold text-white transition-transform hover:scale-[1.02] sm:inline-flex"
           >
-            Hire me <ArrowUpRight className="h-4 w-4" />
+            Work with me <ArrowUpRight className="h-4 w-4" />
           </a>
           <a href="#experience" className="text-sm font-medium text-fg md:hidden" aria-label="See experience">
             Experience
@@ -152,14 +170,14 @@ export default function Portfolio() {
               <Reveal>
                 <p className="mb-5 inline-flex items-center gap-2 text-sm font-medium text-accent">
                   <Sparkles className="h-4 w-4" />
-                  AI Content Specialist · Dhaka, Bangladesh
+                  Business × AI · Dhaka, Bangladesh
                 </p>
               </Reveal>
               <Reveal delay={0.08}>
                 <h1 className="font-heading text-4xl font-bold leading-[1.05] tracking-tight text-fg md:text-6xl">
-                  I turn imagination into AI content that{" "}
+                  I understand business and{" "}
                   <span className="relative whitespace-nowrap">
-                    gets results
+                    scale it with AI
                     <span className="absolute inset-x-0 bottom-1 -z-10 h-3 bg-accent/20 md:h-4" aria-hidden="true" />
                   </span>
                   .
@@ -167,26 +185,26 @@ export default function Portfolio() {
               </Reveal>
               <Reveal delay={0.16}>
                 <p className="mt-6 max-w-xl text-lg leading-relaxed text-mfg md:text-xl">
-                  I&rsquo;m <strong className="font-semibold text-fg">Hossain Simum Anon</strong> — a content
-                  specialist who plans, creates and optimizes AI-driven visuals and copy, then proves what
-                  works with data. Bilingual, operator-minded, and result-obsessed.
+                  I&rsquo;m <strong className="font-semibold text-fg">Hossain Simum Anon</strong> — a visionary who
+                  understands business end to end, builds it, and automates it with AI. Founder, marketer, engineer,
+                  and consultant — I can tell you all about business and AI, and I love consulting on it.
                 </p>
               </Reveal>
               <Reveal delay={0.24}>
                 <div className="mt-8 flex flex-wrap items-center gap-3">
                   <a
-                    href={`mailto:${EMAIL}?subject=AI%20Content%20Specialist%20Application`}
+                    href={`mailto:${EMAIL}?subject=Let%27s%20build%20something`}
                     className="inline-flex items-center gap-2 rounded-full bg-fg px-6 py-3 text-sm font-semibold text-white transition-transform hover:scale-[1.03]"
                   >
-                    Hire me <ArrowUpRight className="h-4 w-4" />
+                    Let&rsquo;s talk <ArrowUpRight className="h-4 w-4" />
                   </a>
                   <a
-                    href="#experience"
+                    href="#what-i-do"
                     className="inline-flex items-center gap-2 rounded-full border border-line bg-card px-6 py-3 text-sm font-semibold text-fg transition-colors hover:border-fg"
                   >
-                    See the experience
+                    What I do
                   </a>
-                  <span className="text-sm text-mfg">Available · Open to relocate</span>
+                  <span className="text-sm text-mfg">Available · Open to relocate · Consulting</span>
                 </div>
               </Reveal>
             </div>
@@ -208,25 +226,25 @@ export default function Portfolio() {
           </div>
         </section>
 
-        {/* SKILLS */}
-        <section id="skills" className="section-pad border-b border-line bg-white">
+        {/* WHAT I DO */}
+        <section id="what-i-do" className="section-pad border-b border-line bg-white">
           <div className="container-x">
             <div className="mb-12 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
               <Reveal>
                 <div>
-                  <p className="text-sm font-medium text-accent">What I bring</p>
-                  <h2 className="mt-2 font-heading text-3xl font-bold tracking-tight md:text-4xl">A full creative loop</h2>
+                  <p className="text-sm font-medium text-accent">What I do</p>
+                  <h2 className="mt-2 font-heading text-3xl font-bold tracking-tight md:text-4xl">Business + AI, across the whole arc</h2>
                 </div>
               </Reveal>
               <Reveal delay={0.1}>
                 <p className="max-w-sm text-sm leading-relaxed text-mfg">
-                  From the first spark of an idea to an optimized, shipping asset — the whole pipeline,
-                  not just the generation.
+                  From understanding the economics of a business to automating the work — I operate across the
+                  full arc, and I advise others on it too.
                 </p>
               </Reveal>
             </div>
-            <div className="grid gap-4 md:grid-cols-2">
-              {SKILLS.map((s, i) => {
+            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+              {SERVICES.map((s, i) => {
                 const Icon = s.icon;
                 return (
                   <Reveal key={s.title} delay={i * 0.08}>
@@ -286,13 +304,52 @@ export default function Portfolio() {
           </div>
         </section>
 
-        {/* ABOUT */}
+        {/* VENTURES */}
+        <section id="ventures" className="section-pad border-b border-line">
+          <div className="container-x">
+            <Reveal>
+              <div className="mb-12">
+                <p className="text-sm font-medium text-accent">Ventures</p>
+                <h2 className="mt-2 font-heading text-3xl font-bold tracking-tight md:text-4xl">Things I built from zero</h2>
+              </div>
+            </Reveal>
+            <div className="space-y-8">
+              {VENTURES.map((v, i) => {
+                const Icon = v.icon;
+                return (
+                  <Reveal key={v.company} delay={i * 0.06} dir="left">
+                    <article className="group grid gap-5 border-b border-line pb-8 last:border-0 lg:grid-cols-[260px_1fr]">
+                      <div className="transition-transform duration-300 group-hover:translate-x-1">
+                        <div className="flex items-center gap-2 text-accent">
+                          <Icon className="h-4 w-4" />
+                          <span className="font-heading text-lg font-semibold text-fg">{v.company}</span>
+                        </div>
+                        <p className="mt-1 text-sm font-medium text-fg">{v.role}</p>
+                        <p className="mt-1 text-xs text-mfg">{v.range}</p>
+                      </div>
+                      <ul className="space-y-2.5">
+                        {v.points.map((p) => (
+                          <li key={p} className="flex gap-3 text-[15px] leading-relaxed text-mfg">
+                            <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" aria-hidden="true" />
+                            {p}
+                          </li>
+                        ))}
+                      </ul>
+                    </article>
+                  </Reveal>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* About */}
         <section id="about" className="section-pad border-b border-line">
           <div className="container-x grid gap-12 lg:grid-cols-2 lg:items-start">
             <Reveal dir="right">
               <div>
                 <p className="text-sm font-medium text-accent">About</p>
-                <h2 className="mt-2 font-heading text-3xl font-bold tracking-tight md:text-4xl">Operator at the AI edge</h2>
+                <h2 className="mt-2 font-heading text-3xl font-bold tracking-tight md:text-4xl">Visionary at the business × AI crossover</h2>
               </div>
             </Reveal>
             <Reveal delay={0.1}>
@@ -353,20 +410,21 @@ export default function Portfolio() {
               <div className="max-w-xl">
                 <p className="inline-flex items-center gap-2 text-sm font-medium text-white/70">
                   <Globe className="h-4 w-4" />
-                  Portfolio · GitHub Pages · Open to relocate
+                  Business × AI · Portfolio · Open to relocate & consulting
                 </p>
                 <h2 className="mt-3 font-heading text-3xl font-bold leading-tight tracking-tight md:text-5xl">
-                  Let&rsquo;s build the future of content.
+                  Let&rsquo;s talk business and AI.
                 </h2>
                 <p className="mt-4 text-lg leading-relaxed text-white/70">
-                  Send me a brief and I&rsquo;ll send back a concept — imagination to AI visual, ready to test.
+                  Whether you want to scale a business, automate a service, or get a straight answer on where AI
+                  fits — send me a message and I&rsquo;ll take it from there.
                 </p>
               </div>
             </Reveal>
             <Reveal delay={0.12}>
               <div className="flex flex-wrap items-center gap-3">
                 <a
-                  href={`mailto:${EMAIL}?subject=AI%20Content%20Specialist%20Application`}
+                  href={`mailto:${EMAIL}?subject=Let%27s%20build%20something`}
                   className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:scale-[1.04] hover:shadow-[0_8px_30px_rgba(37,99,235,0.4)]"
                 >
                   <Mail className="h-4 w-4" /> {EMAIL}
@@ -393,10 +451,10 @@ export default function Portfolio() {
       {/* Footer */}
       <footer className="border-t border-line bg-white">
         <div className="container-x flex flex-wrap items-center justify-between gap-3 py-8 text-sm text-mfg">
-          <span>&copy; {new Date().getFullYear()} Hossain Simum Anon · AI Content Specialist</span>
+          <span>&copy; {new Date().getFullYear()} Hossain Simum Anon · Business × AI</span>
           <span className="flex items-center gap-1.5">
-            <TrendingUp className="h-3.5 w-3.5 text-accent" />
-            Dhaka, Bangladesh · Open to relocate
+            <Compass className="h-3.5 w-3.5 text-accent" />
+            Dhaka, Bangladesh · Open to relocate & consulting
           </span>
         </div>
       </footer>
