@@ -184,9 +184,9 @@ export default function Portfolio() {
                 </p>
               </Reveal>
               <Reveal delay={0.08}>
-                <h1 className="font-heading text-4xl font-bold leading-[1.05] tracking-tight text-fg md:text-6xl">
+                <h1 className="font-heading text-5xl font-bold leading-[1.02] tracking-tight text-fg md:text-7xl">
                   I understand business and{" "}
-                  <span className="relative whitespace-nowrap">
+                  <span className="relative inline-block whitespace-nowrap">
                     scale it with AI
                     <span className="absolute inset-x-0 bottom-1 -z-10 h-3 bg-accent/20 md:h-4" aria-hidden="true" />
                   </span>
@@ -224,7 +224,7 @@ export default function Portfolio() {
               <div className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-line bg-line md:grid-cols-4">
                 {METRICS.map((m) => (
                   <div key={m.label} className="bg-card p-6">
-                    <p className="font-heading text-3xl font-bold tracking-tight text-fg md:text-4xl">
+                    <p className="tabular font-heading text-3xl font-bold tracking-tight text-fg md:text-4xl">
                       <Counter value={m.value} suffix={m.suffix} prefix={m.prefix} decimals={m.decimals ?? 0} />
                     </p>
                     <p className="mt-1.5 text-sm font-medium text-fg">{m.label}</p>

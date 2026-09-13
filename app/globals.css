@@ -28,6 +28,18 @@
     background: var(--accent);
     color: #fff;
   }
+
+  /* Visible focus ring — never remove outline; 2px accent ring w/ offset for keyboard users */
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  /* Tabular figures so the metric counters don't jitter as they tick up */
+  .tabular {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum";
+  }
 }
 
 @layer utilities {

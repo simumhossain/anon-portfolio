@@ -5,8 +5,10 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        body: ["var(--font-inter)", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "sans-serif"],
-        heading: ["var(--font-space)", "Space Grotesk", "-apple-system", "sans-serif"],
+        // Display/headings — Archivo (distinctive, editorial; replaces generic Inter/Space for display)
+        heading: ["var(--font-archivo)", "Space Grotesk", "sans-serif"],
+        // Body — Space Grotesk (clean, readable)
+        body: ["var(--font-space)", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "sans-serif"],
       },
       colors: {
         bg: "#fafafa",
@@ -19,6 +21,12 @@ const config: Config = {
         "accent-soft": "#eaf0fe",
       },
       maxWidth: { container: "76rem" },
+      borderRadius: {
+        // One unified radius scale (4 / 8 / 12 / 16) — no arbitrary mixing
+        sm: "8px",
+        md: "12px",
+        lg: "16px",
+      },
       boxShadow: {
         card: "0 1px 2px rgba(16,24,40,.04), 0 1px 3px rgba(16,24,40,.06)",
         hover: "0 8px 24px rgba(16,24,40,.08)",

@@ -1,32 +1,32 @@
-import { Space_Grotesk, Inter } from "next/font/google";
+import { Space_Grotesk, Archivo } from "next/font/google";
 import "./globals.css";
 import type { Metadata } from "next";
 
+const archivo = Archivo({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-archivo",
+});
 const space = Space_Grotesk({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   variable: "--font-space",
 });
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  variable: "--font-inter",
-});
 
 export const metadata: Metadata = {
-  title: "Hossain Simum Anon — AI Content Specialist",
+  title: "Hossain Simum Anon — Business × AI",
   description:
-    "AI Content Specialist portfolio — imagination to AI-driven visuals and copy, optimized for results. Hossain Simum Anon.",
+    "Hossain Simum Anon — visionary who understands business end to end and scales it with AI. Founder, marketer, engineer, and consultant. Dhaka, Bangladesh.",
   openGraph: {
-    title: "Hossain Simum Anon — AI Content Specialist",
-    description: "I turn imagination into AI content that gets results.",
+    title: "Hossain Simum Anon — Business × AI",
+    description: "I understand business and scale it with AI.",
     type: "website",
   },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${space.variable} ${inter.variable}`}>
+    <html lang="en" className={`${space.variable} ${archivo.variable}`}>
       <body className="font-body antialiased">{children}</body>
     </html>
   );
