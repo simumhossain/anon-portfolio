@@ -27,8 +27,8 @@ const SERVICES = [
   {
     icon: Cpu,
     title: "Automate with AI",
-    desc: "Any business or service, I can see where it can be automated — content, ads, ops, customer service, reporting. I design the workflow and make the AI do the heavy lifting.",
-    tools: "Agent workflows · Prompt engineering · Automation",
+    desc: "Any business or service, I can see where it can be automated — content, ads, ops, customer service, reporting. I design the workflow and make the AI do the heavy lifting, building command centers that run the business's day-to-day.",
+    tools: "Agent workflows · Prompt engineering · Command centers",
   },
   {
     icon: Target,
@@ -67,6 +67,16 @@ const EXPERIENCE = [
       "Drove an 8× return on ad spend for the construction client.",
     ],
     built: "Visual concepts · Ad copy · A/B lab · Campaign strategy",
+  },
+  {
+    company: "Beans & Bakes",
+    role: "Growth & Campaign Partner",
+    range: "Client engagement",
+    points: [
+      "Second agency client — applying the same A/B-tested growth playbook to a food & bake brand.",
+      "Building owned ad systems, creative testing, and funnel optimization to scale local revenue.",
+    ],
+    built: "Campaign strategy · Creative testing · Growth systems",
   },
   {
     company: "M/s Nakshee Decor",
@@ -118,9 +128,9 @@ const VENTURES = [
 ];
 
 const ABOUT_PARAGRAPHS = [
-  "I'm Hossain Simum Anon — a visionary who understands business end to end, and an AI-first builder who automates any business or service. I'm equally comfortable talking strategy with a founder and building the workflow that executes it.",
-  "I've scaled a business from 12L to 1 Crore BDT in six months, founded and run three ventures, earned a published patent, and use AI daily to remove friction from everything I touch. My edge is the crossover: I see both how a business makes money and where AI can multiply that.",
-  "I consult on business and AI because I enjoy sharing the knowledge. My foundations: B.Sc. in Information & Communication Engineering (DIU, 2026, CGPA 3.27), hands-on ownership across ventures, and a record of real numbers — not claims.",
+  "I'm Hossain Simum Anon — a visionary who understands business end to end, and an AI-first builder who automates any business or service. I run a one-man digital agency that grows client businesses (Maisa Construction, Beans & Bakes), and I consult on business and AI because I enjoy sharing the knowledge.",
+  "I've scaled a business from 12L to 1 Crore BDT in six months, founded and run three ventures, earned a published patent, and use AI daily to remove friction from everything I touch — building command centers that automate content, ads, ops, and reporting for the businesses I serve. My edge is the crossover: I see both how a business makes money and where AI can multiply that.",
+  "I'm equally comfortable talking strategy with a founder and building the workflow that executes it. My foundations: B.Sc. in Information & Communication Engineering (DIU, 2026, CGPA 3.27), hands-on ownership across ventures, and a record of real numbers — not claims.",
 ];
 
 const EDUCATION = [
