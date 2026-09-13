@@ -1,4 +1,4 @@
-import { ArrowUpRight, Sparkles, Target, PenLine, Eye, Mail, Globe, Wand2, TrendingUp, Briefcase, GraduationCap, Phone, MessageCircle, Award, Rocket, Cpu, LineChart, Handshake, ShoppingBag, Store, Lightbulb, Users, Gauge, Compass } from "lucide-react";
+import { ArrowUpRight, Sparkles, Target, PenLine, Eye, Mail, Globe, Wand2, TrendingUp, Briefcase, GraduationCap, Phone, MessageCircle, Award, Rocket, Cpu, LineChart, Handshake, ShoppingBag, Store, Gauge, Compass } from "lucide-react";
 import { Reveal, Counter } from "@/components/motion";
 
 const NAV = [
@@ -11,50 +11,55 @@ const NAV = [
 ];
 
 const METRICS = [
-  { value: 8, suffix: "×", label: "Revenue growth in 6 months", sub: "real BDT, real business" },
-  { value: 0.01, prefix: "$", decimals: 2, label: "Cost per click", sub: "via Meta Ads A/B testing" },
-  { value: 1, suffix: "Cr", label: "BDT monthly run-rate", sub: "12L → 1Cr scaling an operation" },
-  { value: 100, suffix: "+", label: "Customer calls / day", sub: "orders, trust, recovery" },
+  { value: 8, suffix: "×", label: "Revenue growth", sub: "Nakshee Decor, 6 months" },
+  { value: 0.01, prefix: "$", decimals: 2, label: "Cost per click", sub: "Meta Ads A/B testing" },
+  { value: 1, suffix: "Cr", label: "Monthly run-rate", sub: "12L → 1Cr, one operation" },
+  { value: 100, suffix: "+", label: "Calls / day", sub: "orders, trust, recovery" },
 ];
 
 const SERVICES = [
   {
-    icon: LineChart,
+    icon: Compass,
     title: "Understand & scale business",
     desc: "I read the economics of a business — unit economics, margin, funnel, position — then build the machine that grows it. Proven: took a business from 12L to 1Cr BDT in six months.",
     tools: "Strategy · Unit economics · Operations · Pricing",
+    big: true,
   },
   {
     icon: Cpu,
     title: "Automate with AI",
-    desc: "Any business or service, I can see where it can be automated — content, ads, ops, customer service, reporting. I design the workflow and make the AI do the heavy lifting, building command centers that run the business's day-to-day.",
+    desc: "Any business or service, I can see where it can be automated — content, ads, ops, customer service, reporting. I build command centers that run the day-to-day while you scale.",
     tools: "Agent workflows · Prompt engineering · Command centers",
+    big: true,
+    feature: true,
   },
   {
     icon: Target,
-    title: "Growth marketing that converts",
-    desc: "A/B-tested hooks, headlines and visuals against real metrics. I ship what works and cut the rest — creative built to convert at $0.01 CPC.",
+    title: "Growth marketing",
+    desc: "A/B-tested hooks, headlines and visuals against real metrics. I ship what works and cut the rest — $0.01 CPC.",
     tools: "Meta Ads · Analytics · CRO · Funnels",
   },
   {
     icon: PenLine,
     title: "Copy & AI content",
-    desc: "English + Bangla creative that reads human. Campaign headlines engineered to stop the scroll and earn the click.",
+    desc: "English + Bangla creative that reads human. Headlines engineered to stop the scroll.",
     tools: "Copywriting · Canva · Storytelling",
   },
   {
     icon: Rocket,
-    title: "Launch & build ventures",
-    desc: "Founder track: taken ideas from zero to operating businesses — e-commerce, import supply chains, a campus food venture, and a live publication.",
+    title: "Launch & build",
+    desc: "From zero to operating businesses — e-commerce, import supply chains, a campus food venture, a live publication.",
     tools: "Sourcing · Logistics · Product · Positioning",
   },
   {
     icon: Handshake,
     title: "Consult on business + AI",
-    desc: "You understand your domain; I understand how business and AI fit together. I advise on where to invest, what to build, and what to automate — knowledge I share freely.",
+    desc: "You know your domain; I know how business and AI fit. I advise on where to invest, what to build, what to automate — and I train your team on the workflow.",
     tools: "Consulting · Advisory · Training · Roadmaps",
+    wide: true,
+    feature: true,
   },
-];
+].map((s, i) => ({ ...s, i }));
 
 const EXPERIENCE = [
   {
@@ -73,7 +78,7 @@ const EXPERIENCE = [
     role: "Digital Growth Partner",
     range: "Client engagement",
     points: [
-      "Second agency client — applying the same A/B-tested growth playbook to a food & bake brand.",
+      "Second brand in the growth practice — applying the same A/B-tested playbook to a food & bake label.",
       "Building owned ad systems, creative testing, and funnel optimization to scale local revenue.",
     ],
     built: "Campaign strategy · Creative testing · Growth systems",
@@ -162,7 +167,7 @@ export default function Portfolio() {
           </nav>
           <a
             href={`mailto:${EMAIL}?subject=Let%27s%20build%20something`}
-            className="hidden items-center gap-1.5 rounded-full bg-fg px-4 py-2 text-sm font-semibold text-white transition-transform hover:scale-[1.02] sm:inline-flex"
+            className="hidden items-center gap-1.5 rounded-full bg-fg px-4 py-2 text-sm font-semibold text-bg transition-transform hover:scale-[1.02] sm:inline-flex"
           >
             Work with me <ArrowUpRight className="h-4 w-4" />
           </a>
@@ -174,43 +179,43 @@ export default function Portfolio() {
 
       <main>
         {/* HERO */}
-        <section className="border-b border-line">
-          <div className="container-x flex flex-col gap-10 pt-20 pb-16 md:pt-28 md:pb-24">
-            <div className="max-w-3xl">
+        <section className="border-b border-line bg-grid">
+          <div className="container-x flex flex-col gap-12 pt-24 pb-20 md:pt-32 md:pb-28">
+            <div className="max-w-4xl">
               <Reveal>
-                <p className="mb-5 inline-flex items-center gap-2 text-sm font-medium text-accent">
-                  <Sparkles className="h-4 w-4" />
+                <p className="mb-6 inline-flex items-center gap-2 rounded-full border border-line bg-card py-1.5 pl-3 pr-3 text-xs font-medium text-accent">
+                  <Sparkles className="h-3.5 w-3.5" />
                   Business × AI · Dhaka, Bangladesh
                 </p>
               </Reveal>
               <Reveal delay={0.08}>
-                <h1 className="font-heading text-5xl font-bold leading-[1.02] tracking-tight text-fg md:text-7xl">
+                <h1 className="font-heading text-5xl font-bold leading-[1.02] tracking-tight text-fg md:text-[5.5rem] md:leading-[.98]">
                   I understand business and{" "}
                   <span className="relative inline-block whitespace-nowrap">
                     scale it with AI
-                    <span className="absolute inset-x-0 bottom-1 -z-10 h-3 bg-accent/20 md:h-4" aria-hidden="true" />
+                    <span className="absolute inset-x-0 bottom-2 -z-10 h-4 bg-accent/25 md:h-5" aria-hidden="true" />
                   </span>
                   .
                 </h1>
               </Reveal>
               <Reveal delay={0.16}>
-                <p className="mt-6 max-w-xl text-lg leading-relaxed text-mfg md:text-xl">
+                <p className="mt-7 max-w-2xl text-lg leading-relaxed text-mfg md:text-xl">
                   I&rsquo;m <strong className="font-semibold text-fg">Hossain Simum Anon</strong> — a visionary who
-                  understands business end to end, builds it, and automates it with AI. Founder, marketer, engineer,
-                  and consultant — I can tell you all about business and AI, and I love consulting on it.
+                  understands business end to end and scales it with AI. Founder, growth partner, engineer, and
+                  consultant. I can tell you all about business and AI — and I love consulting on it.
                 </p>
               </Reveal>
               <Reveal delay={0.24}>
-                <div className="mt-8 flex flex-wrap items-center gap-3">
+                <div className="mt-9 flex flex-wrap items-center gap-3">
                   <a
                     href={`mailto:${EMAIL}?subject=Let%27s%20build%20something`}
-                    className="inline-flex items-center gap-2 rounded-full bg-fg px-6 py-3 text-sm font-semibold text-white transition-transform hover:scale-[1.03]"
+                    className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-semibold text-white shadow-glow transition-all hover:scale-[1.03] hover:shadow-lift"
                   >
                     Let&rsquo;s talk <ArrowUpRight className="h-4 w-4" />
                   </a>
                   <a
                     href="#what-i-do"
-                    className="inline-flex items-center gap-2 rounded-full border border-line bg-card px-6 py-3 text-sm font-semibold text-fg transition-colors hover:border-fg"
+                    className="inline-flex items-center gap-2 rounded-full border border-line bg-card px-6 py-3 text-sm font-semibold text-fg transition-colors hover:border-accent"
                   >
                     What I do
                   </a>
@@ -236,34 +241,42 @@ export default function Portfolio() {
           </div>
         </section>
 
-        {/* WHAT I DO */}
-        <section id="what-i-do" className="section-pad border-b border-line bg-white">
+        {/* WHAT I DO — bento grid */}
+        <section id="what-i-do" className="section-pad border-b border-line bg-card-warm">
           <div className="container-x">
-            <div className="mb-12 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+            <div className="mb-14 flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
               <Reveal>
                 <div>
-                  <p className="text-sm font-medium text-accent">What I do</p>
-                  <h2 className="mt-2 font-heading text-3xl font-bold tracking-tight md:text-4xl">Business + AI, across the whole arc</h2>
+                  <p className="text-sm font-medium text-accent">01 — What I do</p>
+                  <h2 className="mt-3 font-heading text-4xl font-bold tracking-tight md:text-5xl">
+                    Business + AI
+                    <span className="text-mfg">, across the whole arc.</span>
+                  </h2>
                 </div>
               </Reveal>
               <Reveal delay={0.1}>
                 <p className="max-w-sm text-sm leading-relaxed text-mfg">
-                  From understanding the economics of a business to automating the work — I operate across the
-                  full arc, and I advise others on it too.
+                  From understanding the economics of a business to automating the work — I operate across the full arc, and I advise others on it too.
                 </p>
               </Reveal>
             </div>
-            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-              {SERVICES.map((s, i) => {
+            <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-6">
+              {SERVICES.map((s) => {
                 const Icon = s.icon;
+                const span = s.wide ? "lg:col-span-6" : s.big ? "lg:col-span-3" : "lg:col-span-2";
+                const featured = s.feature || false;
                 return (
-                  <Reveal key={s.title} delay={i * 0.08}>
-                    <div className="group flex h-full flex-col rounded-2xl border border-line bg-card p-7 shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:border-accent/40 hover:shadow-hover">
-                      <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-accent-soft text-accent transition-all duration-300 group-hover:scale-110 group-hover:bg-accent group-hover:text-white">
+                  <Reveal key={s.title} delay={s.i * 0.05}>
+                    <div
+                      className={`group flex h-full flex-col rounded-2xl border bg-card p-7 shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lift ${span} ${featured ? "border-accent/40 hover:border-accent/70" : "border-line hover:border-accent/40"}`}
+                    >
+                      <div
+                        className={`mb-4 flex h-11 w-11 items-center justify-center rounded-xl transition-all duration-300 group-hover:scale-110 ${featured ? "bg-accent text-white" : "bg-accent-soft text-accent group-hover:bg-accent group-hover:text-white"}`}
+                      >
                         <Icon className="h-5 w-5" />
                       </div>
                       <h3 className="font-heading text-lg font-semibold">{s.title}</h3>
-                      <p className="mt-2 flex-1 text-[15px] leading-relaxed text-mfg">{s.desc}</p>
+                      <p className="mt-2.5 flex-1 text-[15px] leading-relaxed text-mfg">{s.desc}</p>
                       <p className="mt-4 text-xs font-medium uppercase tracking-wide text-mfg">{s.tools}</p>
                     </div>
                   </Reveal>
@@ -274,18 +287,20 @@ export default function Portfolio() {
         </section>
 
         {/* EXPERIENCE */}
-        <section id="experience" className="section-pad border-b border-line bg-white">
+        <section id="experience" className="section-pad border-b border-line bg-bg">
           <div className="container-x">
             <Reveal>
-              <div className="mb-12">
-                <p className="text-sm font-medium text-accent">Experience</p>
-                <h2 className="mt-2 font-heading text-3xl font-bold tracking-tight md:text-4xl">Work that moved real numbers</h2>
+              <div className="mb-14">
+                <p className="text-sm font-medium text-accent">02 — Experience</p>
+                <h2 className="mt-3 font-heading text-4xl font-bold tracking-tight md:text-5xl">
+                  Work that moved real numbers.
+                </h2>
               </div>
             </Reveal>
-            <div className="space-y-8">
+            <div className="space-y-9">
               {EXPERIENCE.map((e, i) => (
                 <Reveal key={e.company} delay={i * 0.06} dir="left">
-                  <article className="group grid gap-5 border-b border-line pb-8 last:border-0 lg:grid-cols-[260px_1fr]">
+                  <article className="group grid gap-5 border-b border-line pb-9 last:border-0 lg:grid-cols-[280px_1fr]">
                     <div className="transition-transform duration-300 group-hover:translate-x-1">
                       <div className="flex items-center gap-2 text-accent">
                         <Briefcase className="h-4 w-4" />
@@ -315,20 +330,22 @@ export default function Portfolio() {
         </section>
 
         {/* VENTURES */}
-        <section id="ventures" className="section-pad border-b border-line">
+        <section id="ventures" className="section-pad border-b border-line bg-card-warm">
           <div className="container-x">
             <Reveal>
-              <div className="mb-12">
-                <p className="text-sm font-medium text-accent">Ventures</p>
-                <h2 className="mt-2 font-heading text-3xl font-bold tracking-tight md:text-4xl">Things I built from zero</h2>
+              <div className="mb-14">
+                <p className="text-sm font-medium text-accent">03 — Ventures</p>
+                <h2 className="mt-3 font-heading text-4xl font-bold tracking-tight md:text-5xl">
+                  Things I built from zero.
+                </h2>
               </div>
             </Reveal>
-            <div className="space-y-8">
+            <div className="space-y-9">
               {VENTURES.map((v, i) => {
                 const Icon = v.icon;
                 return (
                   <Reveal key={v.company} delay={i * 0.06} dir="left">
-                    <article className="group grid gap-5 border-b border-line pb-8 last:border-0 lg:grid-cols-[260px_1fr]">
+                    <article className="group grid gap-5 border-b border-line pb-9 last:border-0 lg:grid-cols-[280px_1fr]">
                       <div className="transition-transform duration-300 group-hover:translate-x-1">
                         <div className="flex items-center gap-2 text-accent">
                           <Icon className="h-4 w-4" />
@@ -354,16 +371,18 @@ export default function Portfolio() {
         </section>
 
         {/* About */}
-        <section id="about" className="section-pad border-b border-line">
-          <div className="container-x grid gap-12 lg:grid-cols-2 lg:items-start">
+        <section id="about" className="section-pad border-b border-line bg-bg">
+          <div className="container-x grid gap-14 lg:grid-cols-2 lg:items-start">
             <Reveal dir="right">
               <div>
-                <p className="text-sm font-medium text-accent">About</p>
-                <h2 className="mt-2 font-heading text-3xl font-bold tracking-tight md:text-4xl">Visionary at the business × AI crossover</h2>
+                <p className="text-sm font-medium text-accent">04 — About</p>
+                <h2 className="mt-3 font-heading text-4xl font-bold tracking-tight md:text-5xl">
+                  Visionary at the business × AI crossover.
+                </h2>
               </div>
             </Reveal>
             <Reveal delay={0.1}>
-              <div className="space-y-4 text-[15px] leading-relaxed text-mfg">
+              <div className="space-y-5 text-[15px] leading-relaxed text-mfg">
                 {ABOUT_PARAGRAPHS.map((p) => (
                   <p key={p}>{p}</p>
                 ))}
@@ -373,16 +392,16 @@ export default function Portfolio() {
         </section>
 
         {/* EDUCATION */}
-        <section id="education" className="section-pad border-b border-line bg-white">
+        <section id="education" className="section-pad border-b border-line bg-card-warm">
           <div className="container-x">
             <Reveal>
-              <p className="text-sm font-medium text-accent">Education & certifications</p>
-              <h2 className="mt-2 font-heading text-3xl font-bold tracking-tight md:text-4xl">Built to keep learning</h2>
+              <p className="text-sm font-medium text-accent">05 — Education & certifications</p>
+              <h2 className="mt-3 font-heading text-4xl font-bold tracking-tight md:text-5xl">Built to keep learning.</h2>
             </Reveal>
-            <div className="mt-10 grid gap-4 md:grid-cols-3">
+            <div className="mt-12 grid gap-5 md:grid-cols-3">
               {EDUCATION.map((ed, i) => (
                 <Reveal key={ed.degree} delay={i * 0.1}>
-                  <div className="h-full rounded-2xl border border-line bg-card p-6 shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-hover">
+                  <div className="h-full rounded-2xl border border-line bg-card p-7 shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-lift">
                     <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-accent-soft text-accent">
                       <GraduationCap className="h-5 w-5" />
                     </div>
@@ -394,7 +413,7 @@ export default function Portfolio() {
               ))}
             </div>
             <Reveal delay={0.15}>
-              <div className="mt-10">
+              <div className="mt-12">
                 <div className="mb-4 flex items-center gap-2 text-accent">
                   <Award className="h-4 w-4" />
                   <span className="font-heading text-base font-semibold text-fg">Certifications & highlights</span>
@@ -413,21 +432,21 @@ export default function Portfolio() {
         </section>
 
         {/* CONTACT CTA */}
-        <section id="contact" className="relative overflow-hidden bg-fg text-white">
-          <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-accent/25 blur-3xl" aria-hidden="true" />
-          <div className="container-x flex flex-col items-start gap-8 py-20 md:py-24">
+        <section id="contact" className="relative overflow-hidden bg-bg">
+          <div className="pointer-events-none absolute -right-24 -top-24 h-96 w-96 rounded-full bg-accent/15 blur-3xl" aria-hidden="true" />
+          <div className="pointer-events-none absolute -left-24 bottom-0 h-72 w-72 rounded-full bg-accent/10 blur-3xl" aria-hidden="true" />
+          <div className="container-x flex flex-col items-start gap-9 py-24 md:py-28">
             <Reveal className="w-full">
               <div className="max-w-xl">
-                <p className="inline-flex items-center gap-2 text-sm font-medium text-white/70">
-                  <Globe className="h-4 w-4" />
-                  Business × AI · Portfolio · Open to relocate & consulting
+                <p className="inline-flex items-center gap-2 text-sm font-medium text-accent">
+                  <Gauge className="h-4 w-4" />
+                  06 — Let&rsquo;s talk
                 </p>
-                <h2 className="mt-3 font-heading text-3xl font-bold leading-tight tracking-tight md:text-5xl">
+                <h2 className="mt-3 font-heading text-4xl font-bold leading-tight tracking-tight text-white md:text-6xl">
                   Let&rsquo;s talk business and AI.
                 </h2>
-                <p className="mt-4 text-lg leading-relaxed text-white/70">
-                  Whether you want to scale a business, automate a service, or get a straight answer on where AI
-                  fits — send me a message and I&rsquo;ll take it from there.
+                <p className="mt-5 text-lg leading-relaxed text-mfg">
+                  Whether you want to scale a business, automate a service, or get a straight answer on where AI fits — send me a message and I&rsquo;ll take it from there.
                 </p>
               </div>
             </Reveal>
@@ -435,21 +454,21 @@ export default function Portfolio() {
               <div className="flex flex-wrap items-center gap-3">
                 <a
                   href={`mailto:${EMAIL}?subject=Let%27s%20build%20something`}
-                  className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:scale-[1.04] hover:shadow-[0_8px_30px_rgba(37,99,235,0.4)]"
+                  className="inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3.5 text-sm font-semibold text-white shadow-glow transition-all duration-300 hover:scale-[1.04] hover:shadow-lift"
                 >
                   <Mail className="h-4 w-4" /> {EMAIL}
                 </a>
                 <a
                   href="tel:+8801827888314"
-                  className="inline-flex items-center gap-2 rounded-full border border-white/25 px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:border-white/60 hover:bg-white/5"
+                  className="inline-flex items-center gap-2 rounded-full border border-line bg-card px-6 py-3 text-sm font-semibold text-fg transition-all duration-300 hover:border-accent hover:text-fg"
                 >
                   <Phone className="h-4 w-4" /> {PHONE}
                 </a>
               </div>
             </Reveal>
             <Reveal delay={0.2}>
-              <div className="flex flex-wrap gap-4 text-sm text-white/60">
-                <a href="https://linkedin.com/in/hossainanon" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 transition-colors hover:text-white">
+              <div className="flex flex-wrap gap-4 text-sm text-mfg">
+                <a href="https://linkedin.com/in/hossainanon" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 transition-colors hover:text-fg">
                   <MessageCircle className="h-4 w-4" /> linkedin.com/in/hossainanon
                 </a>
               </div>
@@ -459,8 +478,8 @@ export default function Portfolio() {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-line bg-white">
-        <div className="container-x flex flex-wrap items-center justify-between gap-3 py-8 text-sm text-mfg">
+      <footer className="border-t border-line bg-bg">
+        <div className="container-x flex flex-wrap items-center justify-between gap-3 py-10 text-sm text-mfg">
           <span>&copy; {new Date().getFullYear()} Hossain Simum Anon · Business × AI</span>
           <span className="flex items-center gap-1.5">
             <Compass className="h-3.5 w-3.5 text-accent" />

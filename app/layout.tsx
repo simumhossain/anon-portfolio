@@ -22,6 +22,7 @@ export const metadata: Metadata = {
     description: "I understand business and scale it with AI.",
     type: "website",
   },
+  themeColor: "#0e0e10",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

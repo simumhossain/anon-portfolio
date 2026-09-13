@@ -5,32 +5,34 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        // Display/headings — Archivo (distinctive, editorial; replaces generic Inter/Space for display)
         heading: ["var(--font-archivo)", "Space Grotesk", "sans-serif"],
-        // Body — Space Grotesk (clean, readable)
         body: ["var(--font-space)", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "sans-serif"],
       },
       colors: {
-        bg: "#fafafa",
-        fg: "#09090b",
-        card: "#ffffff",
-        muted: "#f4f4f5",
-        mfg: "#64748b",
-        line: "#e4e4e7",
-        accent: "#2563eb",
-        "accent-soft": "#eaf0fe",
+        bg: "#0e0e10",
+        fg: "#e7e7e9",
+        card: "#16161a",
+        "card-warm": "#1c1b20",
+        muted: "#101014",
+        mfg: "#9aa1ab",
+        line: "#26262e",
+        accent: "#3b82f6",
+        "accent-soft": "rgba(59,130,246,.14)",
       },
       maxWidth: { container: "76rem" },
       borderRadius: {
-        // One unified radius scale (4 / 8 / 12 / 16) — no arbitrary mixing
         sm: "8px",
         md: "12px",
         lg: "16px",
       },
       boxShadow: {
-        card: "0 1px 2px rgba(16,24,40,.04), 0 1px 3px rgba(16,24,40,.06)",
-        hover: "0 8px 24px rgba(16,24,40,.08)",
-        lift: "0 20px 40px rgba(9,9,11,.10)",
+        card: "0 1px 2px rgba(255,255,255,.02), 0 1px 3px rgba(0,0,0,.35)",
+        hover: "0 12px 32px rgba(0,0,0,.55)",
+        lift: "0 24px 48px rgba(0,0,0,.6)",
+        glow: "0 0 24px rgba(59,130,246,.25)",
+      },
+      backgroundImage: {
+        grid: "linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px)",
       },
       keyframes: {
         fadeUp: {

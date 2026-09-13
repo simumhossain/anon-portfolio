@@ -4,13 +4,14 @@
 
 @layer base {
   :root {
-    --bg: #fafafa;
-    --fg: #09090b;
-    --card: #ffffff;
-    --muted: #f4f4f5;
-    --muted-fg: #64748b;
-    --border: #e4e4e7;
-    --accent: #2563eb;
+    --bg: #0e0e10;
+    --fg: #e7e7e9;
+    --card: #16161a;
+    --card-warm: #1c1b20;
+    --muted: #101014;
+    --muted-fg: #9aa1ab;
+    --border: #26262e;
+    --accent: #3b82f6;
   }
 
   html {
@@ -40,12 +41,19 @@
     font-variant-numeric: tabular-nums;
     font-feature-settings: "tnum";
   }
+
+  /* Subtle grid texture for the dark "operator terminal" hero */
+  .bg-grid {
+    background-image: linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+    background-size: 44px 44px;
+  }
 }
 
 @layer utilities {
   .section-pad {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
   }
   .container-x {
     width: 100%;
@@ -55,7 +63,7 @@
   }
   @media (min-width: 1024px) {
     .container-x {
-      padding-inline: 2rem;
+      padding-inline: 2.5rem;
     }
   }
 }
