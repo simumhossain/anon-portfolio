@@ -59,7 +59,7 @@ const SERVICES = [
 const EXPERIENCE = [
   {
     company: "Maisa Construction",
-    role: "Lead Content & Campaign Creative",
+    role: "Digital Growth Partner",
     range: "Client engagement",
     points: [
       "Built CREATIVE-CAMPAIGN ads — aspirational two-tone headlines with a land-to-home visual motif, not spec sheets.",
@@ -70,7 +70,7 @@ const EXPERIENCE = [
   },
   {
     company: "Beans & Bakes",
-    role: "Growth & Campaign Partner",
+    role: "Digital Growth Partner",
     range: "Client engagement",
     points: [
       "Second agency client — applying the same A/B-tested growth playbook to a food & bake brand.",
