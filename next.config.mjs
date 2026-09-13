@@ -1,8 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // GitHub Pages project site — served under /anon-portfolio/, so all assets
-  // must be prefixed with the base path or they 404 (CSS/fonts → unstyled page).
-  basePath: "/anon-portfolio",
+  // Custom domain (anon.anonsagent.com) — served at root, no path prefix.
+  basePath: "/",
   output: "export",
   images: { unoptimized: true },
   trailingSlash: true,
