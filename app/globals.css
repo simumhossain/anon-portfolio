@@ -3,12 +3,57 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --bg: #fafafa;
+    --fg: #09090b;
+    --card: #ffffff;
+    --muted: #f4f4f5;
+    --muted-fg: #64748b;
+    --border: #e4e4e7;
+    --accent: #2563eb;
+  }
+
   html {
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
   }
+
   body {
-    background-color: #fafafb;
-    color: #0a0a0f;
+    background-color: var(--bg);
+    color: var(--fg);
+  }
+
+  ::selection {
+    background: var(--accent);
+    color: #fff;
+  }
+}
+
+@layer utilities {
+  .section-pad {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+  .container-x {
+    width: 100%;
+    max-width: 76rem;
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+  }
+  @media (min-width: 1024px) {
+    .container-x {
+      padding-inline: 2rem;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }

@@ -4,31 +4,34 @@ const config: Config = {
   content: ["./app/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      colors: {
-        background: "#FAFAFB",
-        foreground: "#0A0A0F",
-        muted: "#F2F3F5",
-        "muted-foreground": "#6B7280",
-        border: "#E5E7EB",
-        card: "#FFFFFF",
-        brand: {
-          50: "#EFF6FF",
-          100: "#DBEAFE",
-          200: "#BFDBFE",
-          500: "#3B82F6",
-          600: "#2563EB",
-          700: "#1D4ED8",
-          900: "#1E3A5F",
-        },
-        accent: { DEFAULT: "#6D5DF6", soft: "#EEF0FF" },
-      },
       fontFamily: {
-        sans: ["Public Sans", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "sans-serif"],
+        body: ["var(--font-inter)", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "sans-serif"],
+        heading: ["var(--font-space)", "Space Grotesk", "-apple-system", "sans-serif"],
       },
-      borderRadius: { xl2: "14px" },
+      colors: {
+        bg: "#fafafa",
+        fg: "#09090b",
+        card: "#ffffff",
+        muted: "#f4f4f5",
+        mfg: "#64748b",
+        line: "#e4e4e7",
+        accent: "#2563eb",
+        "accent-soft": "#eaf0fe",
+      },
+      maxWidth: { container: "76rem" },
       boxShadow: {
-        soft: "0 4px 20px rgba(0,0,0,0.05)",
-        lift: "0 12px 32px rgba(0,0,0,0.08)",
+        card: "0 1px 2px rgba(16,24,40,.04), 0 1px 3px rgba(16,24,40,.06)",
+        hover: "0 8px 24px rgba(16,24,40,.08)",
+        lift: "0 20px 40px rgba(9,9,11,.10)",
+      },
+      keyframes: {
+        fadeUp: {
+          "0%": { opacity: "0", transform: "translateY(12px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+      },
+      animation: {
+        fadeUp: "fadeUp .5s ease-out forwards",
       },
     },
   },
