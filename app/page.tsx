@@ -413,8 +413,8 @@ export default function Portfolio() {
               <div>
                 <p className="text-xs font-medium uppercase tracking-widest text-mfg">About</p>
                 <h2 className="mt-3 font-heading text-4xl font-bold tracking-tight md:text-6xl">
-                  Visionary at the
-                  <span className="text-accent"> business × AI</span>
+                  Visionary at the{" "}
+                  <span className="text-accent">business × AI</span>{" "}
                   crossover.
                 </h2>
               </div>
