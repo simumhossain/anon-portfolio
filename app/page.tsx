@@ -1,10 +1,10 @@
 import { ArrowUpRight, Sparkles, Target, PenLine, Eye, Github, Mail, Globe, Wand2, TrendingUp, Briefcase, GraduationCap, Phone, MessageCircle, Award } from "lucide-react";
 
 const NAV = [
-  { href: "#work", label: "Work" },
   { href: "#skills", label: "Skills" },
   { href: "#experience", label: "Experience" },
   { href: "#about", label: "About" },
+  { href: "#education", label: "Education" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -42,9 +42,9 @@ const SKILLS = [
   },
 ];
 
-const WORK = [
+const EXPERIENCE = [
   {
-    client: "Maisa Construction",
+    company: "Maisa Construction",
     role: "Lead Content & Campaign Creative",
     range: "Client engagement",
     points: [
@@ -55,7 +55,7 @@ const WORK = [
     built: "Visual concepts · Ad copy · A/B lab · Campaign strategy",
   },
   {
-    client: "Anon's Agent",
+    company: "Anon's Agent",
     role: "Founder · Content Creator",
     range: "Personal publication",
     points: [
@@ -64,9 +64,6 @@ const WORK = [
     ],
     built: "Publication design · Writing · Editorial system",
   },
-];
-
-const EXPERIENCE = [
   {
     company: "M/s Nakshee Decor",
     role: "Manager (promoted from Marketer in 1 month)",
@@ -140,8 +137,8 @@ export default function Portfolio() {
           >
             Hire me <ArrowUpRight className="h-4 w-4" />
           </a>
-          <a href="#work" className="text-sm font-medium text-fg md:hidden" aria-label="See work">
-            Work
+          <a href="#experience" className="text-sm font-medium text-fg md:hidden" aria-label="See experience">
+            Experience
           </a>
         </div>
       </header>
@@ -176,10 +173,10 @@ export default function Portfolio() {
                   Hire me <ArrowUpRight className="h-4 w-4" />
                 </a>
                 <a
-                  href="#work"
+                  href="#experience"
                   className="inline-flex items-center gap-2 rounded-full border border-line bg-card px-6 py-3 text-sm font-semibold text-fg transition-colors hover:border-fg"
                 >
-                  See the work
+                  See the experience
                 </a>
                 <span className="text-sm text-mfg">Available · Open to relocate</span>
               </div>
@@ -232,44 +229,6 @@ export default function Portfolio() {
           </div>
         </section>
 
-        {/* WORK */}
-        <section id="work" className="section-pad border-b border-line">
-          <div className="container-x">
-            <div className="mb-12">
-              <p className="text-sm font-medium text-accent">Selected work</p>
-              <h2 className="mt-2 font-heading text-3xl font-bold tracking-tight md:text-4xl">Creative, with receipts</h2>
-            </div>
-            <div className="space-y-6">
-              {WORK.map((w, i) => (
-                <article key={w.client} className="flex flex-col gap-6 rounded-2xl border border-line bg-card p-7 transition-all hover:shadow-hover md:p-9 lg:flex-row lg:gap-12">
-                  <div className="lg:w-64 lg:shrink-0">
-                    <div className="flex items-center gap-3">
-                      <span className="font-heading text-sm font-semibold text-accent">0{i + 1}</span>
-                      <span className="h-px w-8 bg-line" aria-hidden="true" />
-                    </div>
-                    <h3 className="mt-3 font-heading text-xl font-bold">{w.client}</h3>
-                    <p className="mt-1 text-sm font-medium text-fg">{w.role}</p>
-                    <p className="mt-1 text-xs text-mfg">{w.range}</p>
-                  </div>
-                  <div className="flex-1">
-                    <ul className="space-y-2.5">
-                      {w.points.map((p) => (
-                        <li key={p} className="flex gap-3 text-[15px] leading-relaxed text-mfg">
-                          <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" aria-hidden="true" />
-                          {p}
-                        </li>
-                      ))}
-                    </ul>
-                    <p className="mt-5 border-t border-line pt-4 text-xs text-mfg">
-                      <strong className="font-semibold text-fg">Built:</strong> {w.built}
-                    </p>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* EXPERIENCE */}
         <section id="experience" className="section-pad border-b border-line bg-white">
           <div className="container-x">
@@ -296,6 +255,11 @@ export default function Portfolio() {
                       </li>
                     ))}
                   </ul>
+                  {e.built && (
+                    <p className="mt-2 text-xs text-mfg">
+                      <strong className="font-semibold text-fg">Built:</strong> {e.built}
+                    </p>
+                  )}
                 </article>
               ))}
             </div>
